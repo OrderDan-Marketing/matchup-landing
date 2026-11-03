@@ -4,126 +4,377 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>心跳配對 MatchUp</title>
-<meta name="description" content="心跳配對 MatchUp,1 對 1 配對服務。我們聽你想要的相處樣子,從優質會員中挑出合適的人,配對師陪你到見面。">
+<meta name="description" content="心跳配對 MatchUp,1 對 1 配對服務。我們聽你說想要的相處方式,從經過身份驗證的會員中挑出合適的人,配對師陪你到見面之後。免費配對諮詢,30 秒完成申請。">
 <meta name="robots" content="noindex,nofollow">
 <link rel="icon" href="data:,">
 <meta property="og:type" content="website">
 <meta property="og:title" content="心跳配對 MatchUp｜用心跳找到對的人">
-<meta property="og:description" content="1 對 1 配對服務:深度傾聽、精準媒合、配對師全程陪伴。">
+<meta property="og:description" content="1 對 1 配對服務:深度傾聽、精準媒合、配對師全程陪伴。免費配對諮詢,30 秒完成申請。">
 <meta property="og:url" content="https://orderdan-marketing.github.io/matchup-landing/">
+<meta property="og:image" content="https://orderdan-marketing.github.io/matchup-landing/img/hero-balcony.jpg">
 <meta property="og:locale" content="zh_TW">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC:wght@400;700&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg:#fff8f4;
-    --panel:#ffffff;
-    --ink:#2b2520;
-    --muted:#6b625c;
-    --accent:#d9536a;
-    --accent-ink:#ffffff;
-    --line:#f0ddd5;
-    --radius:16px;
+    --bg:#fbf7f2;
+    --bg-2:#ffffff;
+    --ink:#3f3a3a;
+    --muted:#6b6260;
+    --rose:#e0607e;
+    --rose-deep:#c94a68;
+    --sky:#8cbce6;
+    --cream:#f6ebe3;
+    --line:#eadcd3;
+    --radius:18px;
+    --shadow:0 10px 30px rgba(63,58,58,.08);
   }
   *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
   html,body{margin:0;padding:0}
   body{
-    background:var(--bg);
-    color:var(--ink);
+    background:var(--bg);color:var(--ink);
     font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;
-    font-size:17px;
-    line-height:1.75;
-    -webkit-font-smoothing:antialiased;
+    font-size:17px;line-height:1.8;-webkit-font-smoothing:antialiased;
   }
-  .wrap{max-width:640px;margin:0 auto;padding:0 16px}
-  h1,h2{font-family:"LXGW WenKai TC","Noto Serif TC",serif;line-height:1.3;margin:0}
-  header{padding:56px 0 32px;text-align:center}
-  .brand{font-size:14px;letter-spacing:.2em;color:var(--accent);font-weight:700;margin-bottom:12px}
-  h1{font-size:36px;font-weight:700}
-  .lead{margin:18px auto 0;max-width:30em;color:var(--muted);font-size:18px}
-  section{padding:24px 0}
-  h2{font-size:24px;margin-bottom:16px;padding-left:12px;border-left:4px solid var(--accent)}
-  ol.steps{list-style:none;margin:0;padding:0;display:grid;gap:12px}
-  ol.steps li{
-    display:grid;grid-template-columns:40px 1fr;gap:12px;align-items:start;
-    background:rgba(255,255,255,.7);border:1px solid var(--line);border-radius:var(--radius);padding:14px 16px;
-  }
-  .num{
-    width:40px;height:40px;border-radius:50%;background:var(--accent);color:var(--accent-ink);
-    display:flex;align-items:center;justify-content:center;font-weight:700;font-size:18px;
-  }
-  .step-t{font-weight:700;font-size:18px;margin:0 0 2px}
-  .step-p{margin:0;color:var(--muted)}
-  .who{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px}
-  .who p{margin:0}
-  .cta{text-align:center;padding:36px 0 48px}
-  .cta p{margin:0 0 18px;color:var(--muted)}
+  img{display:block;max-width:100%;height:auto}
+  a{color:inherit}
+  h1,h2,h3{font-family:"LXGW WenKai TC","Noto Serif TC",serif;line-height:1.3;margin:0;font-weight:700}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 16px}
+  .eyebrow{display:inline-block;font-size:13px;letter-spacing:.22em;color:var(--rose);font-weight:700;margin-bottom:12px}
+  .sec{padding:64px 0}
+  .sec-head{margin-bottom:28px}
+  .sec-head h2{font-size:30px}
+  .sec-head p{margin:10px 0 0;color:var(--muted);max-width:36em}
+  .center{text-align:center}
+  .center .sec-head p{margin-left:auto;margin-right:auto}
   .btn{
-    display:inline-block;min-height:52px;line-height:52px;padding:0 32px;border-radius:999px;
-    background:var(--accent);color:var(--accent-ink);text-decoration:none;font-weight:700;font-size:18px;
+    display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 28px;border-radius:999px;
+    text-decoration:none;font-weight:700;font-size:17px;white-space:nowrap;
   }
-  .btn:active{opacity:.85}
-  footer{border-top:1px solid var(--line);padding:24px 0 40px;text-align:center;color:var(--muted);font-size:14px}
+  .btn-rose{background:var(--rose);color:#fff;box-shadow:0 8px 20px rgba(224,96,126,.28)}
+  .btn-rose:active{background:var(--rose-deep)}
+  .btn-ghost{background:#fff;color:var(--ink);border:1.5px solid var(--line)}
+  .btn-block{width:100%}
+
+  /* nav */
+  .nav{position:sticky;top:0;z-index:20;background:rgba(251,247,242,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .nav img{height:34px;width:auto}
+  .nav-links{display:none;gap:26px;font-size:15px;font-weight:500}
+  .nav-links a{text-decoration:none;color:var(--muted)}
+  .nav .btn{min-height:40px;padding:0 18px;font-size:15px}
+
+  /* hero */
+  .hero{--hero-h:620px;position:relative;background:var(--bg);padding-bottom:28px}
+  .hero .bg{position:absolute;top:0;left:0;width:100%;height:var(--hero-h);object-fit:cover;object-position:center 30%}
+  .hero::before{content:"";position:absolute;top:0;left:0;right:0;height:var(--hero-h);background:linear-gradient(180deg,rgba(40,24,30,.58) 0%,rgba(40,24,30,.32) 42%,rgba(40,24,30,.08) 100%)}
+  .hero .wrap{position:relative;display:grid;gap:0}
+  .hero-copy{min-height:var(--hero-h);display:flex;flex-direction:column;justify-content:flex-start;padding:26px 0 0;color:#fff}
+  .hero .eyebrow{color:#fff;opacity:.92}
+  .hero h1{font-size:40px;letter-spacing:.02em;text-shadow:0 2px 14px rgba(0,0,0,.3)}
+  .hero .lead{margin:16px 0 0;font-size:18px;max-width:28em;opacity:.95;text-shadow:0 1px 8px rgba(0,0,0,.35)}
+  .apply{position:relative;z-index:2;margin-top:-28px;background:rgba(255,255,255,.97);color:var(--ink);border-radius:var(--radius);padding:24px 22px;box-shadow:0 18px 40px rgba(63,58,58,.18)}
+  .apply h3{font-size:22px;margin-bottom:6px}
+  .apply .sub{margin:0 0 14px;color:var(--muted);font-size:15px}
+  .apply ul{margin:0 0 18px;padding:0;list-style:none;display:grid;gap:8px;font-size:15px}
+  .apply li{padding-left:24px;position:relative}
+  .apply li::before{content:"";position:absolute;left:4px;top:11px;width:8px;height:8px;border-radius:50%;background:var(--sky)}
+  .apply .fine{margin:12px 0 0;font-size:13px;color:var(--muted);text-align:center}
+
+  /* features */
+  .features{background:var(--bg-2);border-bottom:1px solid var(--line)}
+  .feat-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px 12px;padding:36px 0}
+  .feat{text-align:center;padding:6px 4px}
+  .feat svg{width:44px;height:44px;margin:0 auto 10px;display:block;color:var(--rose)}
+  .feat b{display:block;font-size:17px;margin-bottom:2px}
+  .feat span{font-size:14px;color:var(--muted);line-height:1.6;display:block}
+
+  /* lines */
+  .lines{display:grid;gap:16px}
+  .line-card{position:relative;border-radius:var(--radius);overflow:hidden;aspect-ratio:4/5;box-shadow:var(--shadow)}
+  .line-card img{width:100%;height:100%;object-fit:cover}
+  .line-card .txt{
+    position:absolute;left:0;right:0;bottom:0;padding:120px 20px 22px;color:#fff;
+    background:linear-gradient(to top,rgba(50,30,34,.84) 0%,rgba(50,30,34,.55) 45%,rgba(50,30,34,0) 100%);
+  }
+  .line-card .tag{display:inline-block;font-size:13px;letter-spacing:.12em;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.45);border-radius:999px;padding:2px 12px;margin-bottom:10px}
+  .line-card h3{font-size:24px;margin-bottom:8px}
+  .line-card p{margin:0;font-size:15px;line-height:1.7;opacity:.95}
+
+  /* how */
+  .how{background:var(--bg-2)}
+  .how-grid{display:grid;gap:28px;align-items:center}
+  .how-img img{border-radius:var(--radius);box-shadow:var(--shadow);aspect-ratio:1/1;object-fit:cover;width:100%}
+  .steps{list-style:none;margin:0;padding:0;position:relative}
+  .steps li{position:relative;padding:0 0 26px 62px}
+  .steps li::before{
+    content:attr(data-n);position:absolute;left:0;top:0;width:44px;height:44px;border-radius:50%;
+    background:var(--cream);color:var(--rose);font-weight:700;display:flex;align-items:center;justify-content:center;
+    font-family:"LXGW WenKai TC",serif;font-size:19px;
+  }
+  .steps li::after{content:"";position:absolute;left:21px;top:48px;bottom:4px;width:2px;background:var(--line)}
+  .steps li:last-child::after{display:none}
+  .steps h3{font-size:20px;margin-bottom:4px}
+  .steps p{margin:0;color:var(--muted)}
+
+  /* daily */
+  .daily-grid{display:grid;grid-template-columns:1fr;gap:14px}
+  .daily-grid figure{margin:0;border-radius:var(--radius);overflow:hidden;background:#fff;box-shadow:var(--shadow)}
+  .daily-grid img{aspect-ratio:4/3;object-fit:cover;width:100%}
+  .daily-grid figcaption{padding:12px 16px 14px;font-size:15px;line-height:1.6}
+  .daily-grid figcaption b{display:block;font-family:"LXGW WenKai TC",serif;font-size:18px;margin-bottom:2px}
+  .daily-grid figcaption span{color:var(--muted);font-size:13px}
+
+  /* faq */
+  .faq{background:var(--bg-2)}
+  .faq details{border-bottom:1px solid var(--line);padding:4px 0}
+  .faq summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:16px 0;font-weight:700;font-size:18px}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary::after{content:"+";font-size:24px;color:var(--rose);flex:none;line-height:1}
+  .faq details[open] summary::after{content:"−"}
+  .faq details p{margin:0 0 18px;color:var(--muted)}
+
+  /* cta band */
+  .band{background:linear-gradient(135deg,#f9e4ea 0%,#fbf7f2 55%,#e6f0fa 100%)}
+  .band .wrap{text-align:center;padding:72px 16px}
+  .band h2{font-size:32px}
+  .band p{margin:14px auto 26px;color:var(--muted);max-width:30em}
+  .band .cta{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+
+  footer{padding:36px 0 44px;color:var(--muted);font-size:14px;line-height:1.7}
+  footer .wrap{display:grid;gap:14px;text-align:center;justify-items:center}
+  footer img{height:30px;width:auto;opacity:.9}
+  footer nav{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 18px}
   footer a{color:var(--muted)}
-  @media (min-width:600px){
-    h1{font-size:44px}
-    header{padding-top:72px}
+  footer .notice{font-size:13px;max-width:36em}
+
+  @media (min-width:720px){
+    .nav-links{display:flex}
+    .hero{--hero-h:100%;padding-bottom:0}
+    .hero .bg{height:100%;object-position:center 37%}
+    .hero::before{height:100%;background:linear-gradient(180deg,rgba(40,24,30,.22) 0%,rgba(40,24,30,.3) 50%,rgba(40,24,30,.6) 100%)}
+    .hero .wrap{grid-template-columns:1.2fr .9fr;align-items:start;gap:48px;padding-top:72px;padding-bottom:72px;min-height:680px}
+    .hero-copy{min-height:0;justify-content:center;padding:0}
+    .apply{margin-top:0}
+    .hero h1{font-size:54px}
+    .feat-grid{grid-template-columns:repeat(4,1fr);padding:44px 0}
+    .lines{grid-template-columns:repeat(3,1fr)}
+    .line-card{aspect-ratio:3/4}
+    .how-grid{grid-template-columns:1fr 1.1fr;gap:48px}
+    .daily-grid{grid-template-columns:repeat(3,1fr);gap:16px}
+    .sec{padding:88px 0}
+    .sec-head h2{font-size:36px}
   }
 </style>
 </head>
 <body>
-<div class="wrap">
 
-  <header>
-    <div class="brand">心跳配對 MatchUp</div>
-    <h1>用心跳找到對的人</h1>
-    <p class="lead">1 對 1 配對服務。我們聽你說想要的相處樣子,從優質會員中挑出合適的人,配對師陪你到見面那天。</p>
-  </header>
+<header class="nav">
+  <div class="wrap">
+    <a href="#top" aria-label="心跳配對 MatchUp"><img src="img/logo.png" alt="MatchUp"></a>
+    <nav class="nav-links">
+      <a href="#lines">配對線</a>
+      <a href="#how">配對流程</a>
+      <a href="#daily">在一起的日常</a>
+      <a href="#faq">常見問題</a>
+    </nav>
+    <a class="btn btn-rose" href="#apply">免費配對諮詢</a>
+  </div>
+</header>
 
-  <section>
-    <h2>我們怎麼做</h2>
-    <ol class="steps">
-      <li>
-        <div class="num">1</div>
-        <div>
-          <p class="step-t">深度傾聽</p>
-          <p class="step-p">第一步是聽你說:生活節奏、想要的相處方式、在意的條件。</p>
-        </div>
-      </li>
-      <li>
-        <div class="num">2</div>
-        <div>
-          <p class="step-t">精準媒合</p>
-          <p class="step-p">從優質會員中,挑出條件與步調相近的人介紹給你。</p>
-        </div>
-      </li>
-      <li>
-        <div class="num">3</div>
-        <div>
-          <p class="step-t">全程陪伴</p>
-          <p class="step-p">配對師從第一次談話到見面都在,過程的安排由我們處理。</p>
-        </div>
-      </li>
-    </ol>
-  </section>
+<main id="top">
 
-  <section>
-    <h2>適合誰</h2>
-    <div class="who">
-      <p>25 到 45 歲、工作穩定、想認真交往的單身男女。生活已經有自己的樣子,想找一個人一起過日子。</p>
+  <section class="hero">
+    <img class="bg" src="img/hero-balcony.jpg" alt="">
+    <div class="wrap">
+      <div class="hero-copy">
+        <span class="eyebrow">心跳配對 MatchUp ・ 1 對 1 配對</span>
+        <h1>用心跳<br>找到對的人</h1>
+        <p class="lead">生活已經有自己的樣子,想找一個人一起過日子。我們聽你說想要的相處方式,從會員中挑出合適的人,配對師陪你到見面之後。</p>
+      </div>
+      <div class="apply" id="apply">
+        <h3>免費配對諮詢</h3>
+        <p class="sub">30 秒完成申請,配對師與你聯繫</p>
+        <ul>
+          <li>會員都經過身份驗證</li>
+          <li>配對師 1 對 1 傾聽,再開始找人</li>
+          <li>見面前後全程陪伴</li>
+        </ul>
+        <a class="btn btn-rose btn-block" href="https://www.facebook.com/p/%E5%BF%83%E8%B7%B3%E9%85%8D%E5%B0%8D-MatchUp-61565575084337/">到粉絲專頁申請</a>
+        <p class="fine">官方網站 <a href="https://mecango.com/">mecango.com</a></p>
+      </div>
     </div>
   </section>
 
-  <div class="cta">
-    <p>想多了解我們,歡迎到粉絲專頁看看。</p>
-    <a class="btn" href="https://www.facebook.com/p/%E5%BF%83%E8%B7%B3%E9%85%8D%E5%B0%8D-MatchUp-61565575084337/">心跳配對 粉絲專頁</a>
+  <section class="features">
+    <div class="wrap feat-grid">
+      <div class="feat">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 8.5-7 10-4-1.5-7-5.5-7-10V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg>
+        <b>身份驗證</b><span>會員資料經過核對</span>
+      </div>
+      <div class="feat">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="3"/><circle cx="16" cy="8" r="3"/><path d="M2.5 19c.6-3 2.9-5 5.5-5s4.9 2 5.5 5M10.5 19c.6-3 2.9-5 5.5-5s4.9 2 5.5 5"/></svg>
+        <b>1 對 1 配對</b><span>一位一位介紹,合適才見面</span>
+      </div>
+      <div class="feat">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H8l-4 4V5z"/><path d="M8 9h8M8 12.5h5"/></svg>
+        <b>深度傾聽</b><span>生活節奏、相處方式、在意的條件</span>
+      </div>
+      <div class="feat">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg>
+        <b>全程陪伴</b><span>見面前後,配對師都在</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="lines">
+    <div class="wrap">
+      <div class="sec-head center">
+        <span class="eyebrow">三條配對線</span>
+        <h2>不同的人生階段,各自的相處樣子</h2>
+        <p>配對師依你的年齡與生活狀態,從對應的會員線裡找人。介紹的每一位,都在你想要的節奏上。</p>
+      </div>
+      <div class="lines">
+        <article class="line-card">
+          <img src="img/line-women.jpg" alt="週末下午,兩個人蹲在地板上組書架">
+          <div class="txt">
+            <span class="tag">女性 25–45</span>
+            <h3>合拍,是妳指一步,他做一步</h3>
+            <p>工作穩定、生活圈固定的妳,想遇見成熟、事業穩定、認真交往的他。</p>
+          </div>
+        </article>
+        <article class="line-card">
+          <img src="img/line-men.jpg" alt="週末午後,兩個人在沙發上摺一籃衣服">
+          <div class="txt">
+            <span class="tag">男性 28–45</span>
+            <h3>襪子配成雙,日子也成雙</h3>
+            <p>工作穩了,下班後的時間有了去處。想找一個溫柔、氣質相合、願意一起過日子的她。</p>
+          </div>
+        </article>
+        <article class="line-card">
+          <img src="img/line-senior.jpg" alt="沙發上相擁的兩個人">
+          <div class="txt">
+            <span class="tag">50 歲以上</span>
+            <h3>人生下半場,值得有人陪</h3>
+            <p>散步、喝茶、小旅行,日常有人同行。想找一個聊得來、步調相近的伴。</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec how" id="how">
+    <div class="wrap how-grid">
+      <div class="how-img">
+        <img src="img/how-cafe.jpg" alt="咖啡廳窗邊,兩個人對坐聊天">
+      </div>
+      <div>
+        <div class="sec-head">
+          <span class="eyebrow">配對流程</span>
+          <h2>四個步驟,從填表到見面</h2>
+        </div>
+        <ol class="steps">
+          <li data-n="01">
+            <h3>免費諮詢</h3>
+            <p>填寫表單,30 秒完成申請。配對師與你聯繫,約一個方便的時間聊聊。</p>
+          </li>
+          <li data-n="02">
+            <h3>深度傾聽</h3>
+            <p>聊你的生活節奏、想要的相處方式、在意的條件。聽清楚了,才開始找人。</p>
+          </li>
+          <li data-n="03">
+            <h3>精準媒合</h3>
+            <p>從經過身份驗證的會員中,挑出條件與步調相近的人,一位一位介紹給你。</p>
+          </li>
+          <li data-n="04">
+            <h3>全程陪伴</h3>
+            <p>見面前後,配對師都在。聊聊感受,一起調整下一步。</p>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="daily">
+    <div class="wrap">
+      <div class="sec-head center">
+        <span class="eyebrow">在一起的日常</span>
+        <h2>對的人,藏在每一件小事裡</h2>
+        <p>一把傘、一束花、一片拼圖。相處的質感,在平常的日子裡看得見。</p>
+      </div>
+      <div class="daily-grid">
+        <figure>
+          <img src="img/daily-umbrella.jpg" alt="雨天的路口,兩個人共一把傘">
+          <figcaption><b>雨落在傘外,心動在傘下</b><span>雨天共傘</span></figcaption>
+        </figure>
+        <figure>
+          <img src="img/daily-flowers.jpg" alt="下班進門,他遞出一束花">
+          <figcaption><b>穩重的人,把心思藏在花裡</b><span>帶花回家</span></figcaption>
+        </figure>
+        <figure>
+          <img src="img/daily-puzzle.jpg" alt="夜裡的客廳,兩個人一起拼拼圖">
+          <figcaption><b>一片拼上去,客廳的夜晚有了樣子</b><span>拼拼圖</span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec faq" id="faq">
+    <div class="wrap">
+      <div class="sec-head center">
+        <span class="eyebrow">常見問題</span>
+        <h2>想問的,這裡回答幾個</h2>
+      </div>
+      <details open>
+        <summary>第一次諮詢要費用嗎?</summary>
+        <p>配對諮詢免費。填表後配對師與你聯繫,了解你的需求與期待。</p>
+      </details>
+      <details>
+        <summary>會員是怎麼來的?</summary>
+        <p>會員都經過身份驗證。介紹前,配對師了解雙方的條件與期待,合適才介紹。</p>
+      </details>
+      <details>
+        <summary>我的年齡適合嗎?</summary>
+        <p>25 到 45 歲想認真交往,或 50 歲以上想找人作伴,都有對應的配對線。</p>
+      </details>
+      <details>
+        <summary>配對是怎麼進行的?</summary>
+        <p>1 對 1。配對師聽完你的想法,從會員中挑人介紹,安排見面,見面後持續陪伴。</p>
+      </details>
+      <details>
+        <summary>我的資料會公開嗎?</summary>
+        <p>資料只用於配對,由配對師保管。</p>
+      </details>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <span class="eyebrow">免費配對諮詢</span>
+      <h2>想多了解,歡迎和我們聊聊</h2>
+      <p>30 秒完成申請,配對師與你聯繫。從你想要的相處樣子開始談。</p>
+      <div class="cta">
+        <a class="btn btn-rose" href="https://www.facebook.com/p/%E5%BF%83%E8%B7%B3%E9%85%8D%E5%B0%8D-MatchUp-61565575084337/">到粉絲專頁申請</a>
+        <a class="btn btn-ghost" href="https://mecango.com/">官方網站 mecango.com</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <img src="img/logo.png" alt="MatchUp">
+    <nav>
+      <a href="https://www.facebook.com/p/%E5%BF%83%E8%B7%B3%E9%85%8D%E5%B0%8D-MatchUp-61565575084337/">Facebook 粉絲專頁</a>
+      <a href="https://mecango.com/">官方網站</a>
+    </nav>
+    <div>心跳配對 MatchUp ・ 1 對 1 配對服務</div>
+    <p class="notice">若接到自稱本服務、要求匯款或提供金融資料的電話,請撥 165 反詐騙專線查證。</p>
   </div>
+</footer>
 
-  <footer>
-    心跳配對 MatchUp ・ 官方網站 <a href="https://mecango.com/">mecango.com</a>
-  </footer>
-
-</div>
 </body>
 </html>
