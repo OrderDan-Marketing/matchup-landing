@@ -71,10 +71,11 @@
   .hero .bg{position:absolute;top:0;left:0;width:100%;height:var(--hero-h);object-fit:cover;object-position:center 30%}
   .hero::before{content:"";position:absolute;top:0;left:0;right:0;height:var(--hero-h);background:linear-gradient(180deg,rgba(40,24,30,.58) 0%,rgba(40,24,30,.32) 42%,rgba(40,24,30,.08) 100%)}
   .hero .wrap{position:relative;display:grid;gap:0}
-  .hero-copy{min-height:var(--hero-h);display:flex;flex-direction:column;justify-content:flex-start;padding:26px 0 0;color:#fff}
-  .hero .eyebrow{color:#fff;opacity:.92}
-  .hero h1{font-size:40px;letter-spacing:.02em;text-shadow:0 2px 14px rgba(0,0,0,.3)}
-  .hero .lead{margin:16px 0 0;font-size:18px;max-width:28em;opacity:.95;text-shadow:0 1px 8px rgba(0,0,0,.35)}
+  .hero-copy{min-height:var(--hero-h);display:flex;flex-direction:column;justify-content:flex-start;align-items:flex-start;padding:22px 0 0;color:#fff}
+  .hero-panel{background:rgba(40,24,30,.46);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.18);border-radius:var(--radius);padding:14px 18px 16px;max-width:34em}
+  .hero .eyebrow{color:#fff;opacity:.92;margin-bottom:6px}
+  .hero h1{font-size:34px;letter-spacing:.02em}
+  .hero .lead{margin:10px 0 0;font-size:15.5px;line-height:1.7;max-width:28em;opacity:.96}
   .apply{position:relative;z-index:2;margin-top:-28px;background:rgba(255,255,255,.97);color:var(--ink);border-radius:var(--radius);padding:24px 22px;box-shadow:0 18px 40px rgba(63,58,58,.18)}
   .apply h3{font-size:22px;margin-bottom:6px}
   .apply .sub{margin:0 0 14px;color:var(--muted);font-size:15px}
@@ -152,13 +153,15 @@
 
   @media (min-width:720px){
     .nav-links{display:flex}
-    .hero{--hero-h:100%;padding-bottom:0}
-    .hero .bg{height:100%;object-position:center 37%}
+    .hero{--hero-h:100%;padding-bottom:0;max-width:1600px;margin:0 auto}
+    .hero .bg{height:100%;object-position:center 24%}
     .hero::before{height:100%;background:linear-gradient(180deg,rgba(40,24,30,.22) 0%,rgba(40,24,30,.3) 50%,rgba(40,24,30,.6) 100%)}
-    .hero .wrap{grid-template-columns:1.2fr .9fr;align-items:start;gap:48px;padding-top:72px;padding-bottom:72px;min-height:680px}
+    .hero .wrap{grid-template-columns:1.2fr .9fr;align-items:start;gap:48px;padding-top:56px;padding-bottom:72px;min-height:min(60vw,940px)}
     .hero-copy{min-height:0;justify-content:center;padding:0}
+    .hero-panel{padding:24px 30px 28px}
     .apply{margin-top:0}
-    .hero h1{font-size:54px}
+    .hero h1{font-size:52px}
+    .hero .lead{font-size:18px;line-height:1.8}
     .feat-grid{grid-template-columns:repeat(4,1fr);padding:44px 0}
     .lines{grid-template-columns:repeat(3,1fr)}
     .line-card{aspect-ratio:3/4}
@@ -190,9 +193,11 @@
     <img class="bg" src="img/hero-balcony.jpg" alt="">
     <div class="wrap">
       <div class="hero-copy">
-        <span class="eyebrow">心跳配對 MatchUp ・ 1 對 1 配對</span>
-        <h1>用心跳<br>找到對的人</h1>
-        <p class="lead">生活已經有自己的樣子,想找一個人一起過日子。我們聽你說想要的相處方式,從會員中挑出合適的人,配對師陪你到見面之後。</p>
+        <div class="hero-panel">
+          <span class="eyebrow">心跳配對 MatchUp ・ 1 對 1 配對</span>
+          <h1>用心跳<br>找到對的人</h1>
+          <p class="lead">生活已經有自己的樣子,想找一個人一起過日子。我們聽你說想要的相處方式,從會員中挑出合適的人,配對師陪你到見面之後。</p>
+        </div>
       </div>
       <div class="apply" id="apply">
         <h3>免費配對諮詢</h3>
@@ -203,7 +208,6 @@
           <li>見面前後全程陪伴</li>
         </ul>
         <a class="btn btn-rose btn-block" href="https://www.facebook.com/p/%E5%BF%83%E8%B7%B3%E9%85%8D%E5%B0%8D-MatchUp-61565575084337/">到粉絲專頁申請</a>
-        <p class="fine">官方網站 <a href="https://mecango.com/">mecango.com</a></p>
       </div>
     </div>
   </section>
@@ -357,7 +361,7 @@
       <p>30 秒完成申請,配對師與你聯繫。從你想要的相處樣子開始談。</p>
       <div class="cta">
         <a class="btn btn-rose" href="https://www.facebook.com/p/%E5%BF%83%E8%B7%B3%E9%85%8D%E5%B0%8D-MatchUp-61565575084337/">到粉絲專頁申請</a>
-        <a class="btn btn-ghost" href="https://mecango.com/">官方網站 mecango.com</a>
+        <a class="btn btn-ghost" href="#how">看看我們怎麼配對</a>
       </div>
     </div>
   </section>
@@ -369,7 +373,6 @@
     <img src="img/logo.png" alt="MatchUp">
     <nav>
       <a href="https://www.facebook.com/p/%E5%BF%83%E8%B7%B3%E9%85%8D%E5%B0%8D-MatchUp-61565575084337/">Facebook 粉絲專頁</a>
-      <a href="https://mecango.com/">官方網站</a>
     </nav>
     <div>心跳配對 MatchUp ・ 1 對 1 配對服務</div>
     <p class="notice">若接到自稱本服務、要求匯款或提供金融資料的電話,請撥 165 反詐騙專線查證。</p>
